@@ -6,7 +6,6 @@ export default {
     file: 'app/bundle.js',
     format: 'es'
   },
-  name: 'Shortstack',
   plugins: [
     resolve({
       jsnext: true,
