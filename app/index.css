@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background: hsl(0,0%,90%);
+  font-family: "Google Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 5vmax;
+  letter-spacing: 0.2em;
+}
