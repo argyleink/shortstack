@@ -1,7 +1,19 @@
+@import 'ragrid';
+
+:root {
+  --darkest-grey: hsl(0,0%,2%);
+  --darker-grey: hsl(0,0%,5%);
+  --dark-grey: hsl(0,0%,20%);
+  --grey: hsl(0,0%,50%);
+  --light-grey: hsl(0,0%,60%);
+  --lighter-grey: hsl(0,0%,80%);
+  --lightest-grey: hsl(0,0%,92%);
+}
+
 body {
   margin: 0;
-  background: hsl(0,0%,90%);
-  font-family: "Google Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  background: var(--lightest-grey);
+  font-family: "Google Sans", system-ui;
   display: grid;
   align-items: center;
   justify-content: center;

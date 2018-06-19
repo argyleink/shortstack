@@ -10,6 +10,7 @@
     "dev:js": "rollup -c -w",
     "dev:css": "postcss app/index.css -o app/bundle.css",
     "dev:server": "browser-sync app -w --files 'bundle.js,index.html,bundle.css' --no-open"
+    "dev:css": "postcss app/index.css -o app/bundle.css -w",
   },
   "author": "",
   "license": "ISC",
