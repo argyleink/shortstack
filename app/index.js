@@ -1,3 +1,3 @@
-import { $ } from 'blingblingjs'
+import $ from 'blingblingjs'
 
 console.info($('h1'))
