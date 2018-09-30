@@ -18,7 +18,7 @@
     "ragrid": "^1.0.5"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.24.7",
     "concurrently": "^3.6.0",
     "postcss": "^6.0.23",
     "postcss-cli": "^5.0.1",
