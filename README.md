@@ -11,3 +11,9 @@
 
 ## Results
 This script runs those 3 tasks [concurrently](https://www.npmjs.com/package/concurrently), and now you're rocking and rolling with a small footprint set of tools that will help you keep your bundles small for modern app delivery. 
+
+# Getting Started
+1. Install dependencies `npm i`
+2. Spin it up `npm start`
+
+> note: there's currently no production build steps
