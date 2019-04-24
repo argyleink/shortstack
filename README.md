@@ -10,7 +10,7 @@
 <br><br>
 
 ## Getting Started
-1. Install dependencies `npm i`
-2. Spin it up `npm start`
-
-> note: bring your own production build steps
+1. `mkdir new-project-name && cd $_`
+1. `git clone --depth=1 https://github.com/argyleink/shortstack.git . && rm -rf ./.git`
+1. `npm i`
+1. `npm start`
