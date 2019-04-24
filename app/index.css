@@ -8,6 +8,9 @@
   --light-grey:     hsl(0,0%,60%);
   --lighter-grey:   hsl(0,0%,80%);
   --lightest-grey:  hsl(0,0%,92%);
+
+  /* https://easings.net */
+  --easing: ease-out-expo;
 }
 
 body {
