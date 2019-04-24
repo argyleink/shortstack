@@ -27,4 +27,16 @@ h1 {
   font-weight: lighter;
   font-size: 5vmax;
   letter-spacing: 0.2em;
+
+/* https://andy-bell.design/wrote/custom-property-controlled-fluid-type-sizing/ */
+h1 {
+  --fluid-type-min-size: 2;
+  --fluid-type-max-size: 4;
+  --fluid-type-min-screen: 20;
+  --fluid-type-max-screen: 88;
+
+  font-size: calc(
+    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) * (100vw - (var(--fluid-type-min-screen) * 1rem)) /
+      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
+  );
 }
