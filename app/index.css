@@ -15,18 +15,20 @@
 
 body {
   margin: 0;
-  background: var(--lightest-grey);
-  font-family: "Google Sans", system-ui;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  background: white;
+  color: var(--darker-grey);
+  font-family: system-ui;
   min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 h1 {
   font-weight: lighter;
-  font-size: 5vmax;
   letter-spacing: 0.2em;
+  color: var(--darkest-grey);
+}
+
 
 /* https://andy-bell.design/wrote/custom-property-controlled-fluid-type-sizing/ */
 h1 {
