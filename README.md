@@ -1,5 +1,3 @@
-> 3 [concurrent](https://www.npmjs.com/package/concurrently) tasks providing **shaken bundles** & **transpiled CSS & JS**. 
-
 #### Local Dev Server
 [Browsersync](https://www.browsersync.io) with all the goodies: **live reload**, **cross device syncing**, **remote debugging**, [etc](https://www.browsersync.io).
 
