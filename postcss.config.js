@@ -1,8 +1,10 @@
 const postcssPresetEnv  = require('postcss-preset-env')
 const postcssImport     = require('postcss-import')
+const postcsseasings    = require('postcss-easings')
 
 module.exports = {
   plugins: [
+    postcsseasings(),
     postcssImport(),
     postcssPresetEnv({
       stage: 0,
