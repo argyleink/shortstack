@@ -1,3 +1,3 @@
-import $ from 'blingblingjs'
+import { default as index_css }  from './index.css'
 
-console.info($('h1'))
+console.info(index_css)
