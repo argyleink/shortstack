@@ -10,7 +10,10 @@
 <br><br>
 
 ## Getting Started
-1. `mkdir new-project-name && cd $_`
-1. `git clone --depth=1 https://github.com/argyleink/shortstack.git . && rm -rf ./.git`
+1. `npx degit argyleink/shortstack my-project`
+1. `cd my-project`
 1. `npm i`
 1. `npm start`
+
+## Production build
+Running `npm run build` compiles and minifies your code in `app` and outputs the result to a folder called `dist`
