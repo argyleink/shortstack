@@ -10,10 +10,13 @@
 <br><br>
 
 ## Getting Started
-1. `npx degit argyleink/shortstack my-project`
-1. `cd my-project`
+1. `mkdir new-project-name && cd $_`
+1. `git clone --depth=1 https://github.com/argyleink/shortstack.git . && rm -rf ./.git`
 1. `npm i`
 1. `npm start`
 
-## Production build
-Running `npm run build` compiles and minifies your code in `app` and outputs the result to a folder called `dist`
+## Development
+Running `npm start` runs Browsersync, which watches changes to your files in `./app` and refreshes connected browsers so that you can see the effects of your changes live.
+
+## Building
+Once you're ready to go live `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready to be shared on the web

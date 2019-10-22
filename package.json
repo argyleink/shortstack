@@ -8,16 +8,17 @@
     "dev:js": "rollup -c -w",
     "dev:css": "postcss app/index.css -o app/bundle.css -w",
     "dev:server": "browser-sync start --server 'app' --files 'app/index.html,app/bundle.css,app/bundle.js' --no-open",
-    "build:js": "rollup -c --environment NODE_ENV:production",
-    "build:css": "postcss app/index.css -o dist/bundle.css",
-    "build:html": "cp app/index.html dist/index.html",
-    "build": "run-s build:*",
+    "build:pre:js": "rollup -c --environment NODE_ENV:production",
+    "build:pre:css": "postcss app/index.css -o dist/bundle.css",
+    "build:post:copy": "cp app/index.html dist/index.html",
+    "build": "concurrently npm:build:pre:* && concurrently npm:build:post:*",
     "start": "concurrently --kill-others npm:dev:*"
   },
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "browser-sync": "2.26.7",
+    "concurrently": "5.0.0",
     "import-http": "^0.3.1",
-    "npm-run-all": "4.1.5",
     "postcss": "7.0.18",
     "postcss-cli": "6.1.3",
     "postcss-easings": "^2.0.0",
@@ -29,8 +30,5 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-postcss": "^2.0.3"
   },
-  "devDependencies": {
-    "browser-sync": "2.26.7",
-    "concurrently": "5.0.0"
-  }
+  "dependencies": {}
 }
