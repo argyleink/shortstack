@@ -29,6 +29,5 @@
     "rollup": "1.25.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-postcss": "^2.0.3"
-  },
-  "dependencies": {}
+  }
 }

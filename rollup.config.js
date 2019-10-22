@@ -36,7 +36,7 @@ const prodConfig = {
     importHTTP(),
     postcss({
       extract: true,
-      minimize: true,
+      minimize: { preset: 'default' },
     }),
   ]
 }
