@@ -11,7 +11,7 @@
     "build:pre:js": "rollup -c --environment NODE_ENV:production",
     "build:pre:css": "postcss app/index.css -o dist/bundle.css",
     "build:post:copy": "cp app/index.html dist/index.html",
-    "build": "concurrently npm:build:pre:* && concurrently npm:build:post:*",
+    "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
     "start": "concurrently --kill-others npm:dev:*"
   },
   "license": "ISC",
