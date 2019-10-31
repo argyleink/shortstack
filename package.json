@@ -15,6 +15,7 @@
     "start": "concurrently --kill-others npm:dev:*"
   },
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "2.26.7",
     "concurrently": "5.0.0",
@@ -28,6 +29,7 @@
     "postcss-preset-env": "6.7.0",
     "rollup": "1.25.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-postcss": "^2.0.3"
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^5.1.2"
   }
 }

@@ -1,6 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-
+import { terser } from 'rollup-plugin-terser'
 import { default as importHTTP } from 'import-http/rollup'
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -38,6 +38,7 @@ const prodConfig = {
       extract: true,
       minimize: { preset: 'default' },
     }),
+    terser(),
   ]
 }
 
