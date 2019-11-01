@@ -5,28 +5,31 @@
   "description": "simple starter",
   "main": "index.js",
   "scripts": {
-    "start": "npm run concurrent",
-    "concurrent": "concurrently --kill-others \"npm run dev:js\" \"npm run dev:css\" \"npm run dev:server\"",
-    "bundle": "concurrently \"rollup -c\" \"postcss app/index.css -o app/bundle.css\"",
     "dev:js": "rollup -c -w",
     "dev:css": "postcss app/index.css -o app/bundle.css -w",
-    "dev:server": "browser-sync start --server 'app' --files 'app/index.html,app/bundle.css,app/bundle.js' --no-open"
+    "dev:server": "browser-sync start --server 'app' --files 'app/index.html,app/bundle.css,app/bundle.js' --no-open",
+    "build:pre:js": "rollup -c --environment NODE_ENV:production",
+    "build:pre:css": "postcss app/index.css -o dist/bundle.css",
+    "build:post:copy": "cp app/index.html dist/index.html",
+    "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
+    "start": "concurrently --kill-others npm:dev:*"
   },
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.4",
-    "concurrently": "^4.1.0",
+    "browser-sync": "2.26.7",
+    "concurrently": "5.0.0",
     "import-http": "^0.3.1",
-    "postcss": "^7.0.14",
-    "postcss-cli": "^6.1.2",
+    "postcss": "7.0.18",
+    "postcss-cli": "6.1.3",
     "postcss-easings": "^2.0.0",
     "postcss-import": "^12.0.1",
     "postcss-import-url": "^4.0.0",
     "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.5.0",
-    "rollup": "^1.10.1",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-postcss": "^2.0.3"
+    "postcss-preset-env": "6.7.0",
+    "rollup": "1.25.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-terser": "^5.1.2"
   }
 }

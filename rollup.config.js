@@ -1,26 +1,45 @@
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-
+import { terser } from 'rollup-plugin-terser'
 import { default as importHTTP } from 'import-http/rollup'
 
-export default {
+const isProd = process.env.NODE_ENV === 'production'
+
+const devConfig = {
   input: 'app/index.js',
   output: {
     file: 'app/bundle.js',
-    format: 'es',
+    format: 'esm',
     sourcemap: 'inline',
   },
   plugins: [
-    resolve({
-      jsnext: true,
-    }),
+    resolve(),
     importHTTP(),
     postcss({
-      extract: false,
       inject:  false,
-    })
+    }),
   ],
   watch: {
     exclude: ['node_modules/**'],
   }
 }
+
+const prodConfig = {
+  input: 'app/index.js',
+  output: {
+    file: 'dist/bundle.js',
+    format: 'esm',
+    sourcemap: true,
+  },
+  plugins: [
+    resolve(),
+    importHTTP(),
+    postcss({
+      extract: true,
+      minimize: { preset: 'default' },
+    }),
+    terser(),
+  ]
+}
+
+export default isProd ? prodConfig : devConfig
