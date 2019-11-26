@@ -15,9 +15,6 @@ module.exports = {
     postcssImport(),
     postcssPresetEnv({
       stage: 0,
-      autoprefixer: { 
-        grid: true,
-      },
       browsers,
     }),
     doiuse({browsers}),
