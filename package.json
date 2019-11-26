@@ -19,6 +19,7 @@
   "devDependencies": {
     "browser-sync": "2.26.7",
     "concurrently": "5.0.0",
+    "doiuse": "^4.2.0",
     "import-http": "^0.3.1",
     "postcss": "7.0.18",
     "postcss-cli": "6.1.3",
