@@ -11,34 +11,61 @@
 
   /* https://easings.net */
   --easing: ease-out-expo;
+
+  @media(prefers-color-scheme: light) {
+    --darkest-grey:   hsl(0,0%,98%);
+    --darker-grey:    hsl(0,0%,90%);
+    --dark-grey:      hsl(0,0%,60%);
+    --grey:           hsl(0,0%,50%);
+    --light-grey:     hsl(0,0%,20%);
+    --lighter-grey:   hsl(0,0%,5%);
+    --lightest-grey:  hsl(0,0%,2%);
+  }
 }
 
 body {
   margin: 0;
-  background: white;
-  color: var(--darker-grey);
+  background: var(--darkest-grey);
+  color: var(--light-grey);
   font-family: system-ui;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+h1,h2 {
   font-weight: lighter;
   letter-spacing: 0.2em;
-  color: var(--darkest-grey);
+  color: var(--lighter-grey);
 }
 
+.hexagon-logo {
+  margin-block-start: 10vmax;
+  max-width: 40vh;
+  fill: none;
+  stroke: blue;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 10px;
+}
+  
+.hexagon-logo > polygon {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 1000;
+  transition: stroke-dasharray 0.3s ease;
+  animation: animate-stroke 3s ease forwards;
+}
 
-/* https://andy-bell.design/wrote/custom-property-controlled-fluid-type-sizing/ */
-h1 {
-  --fluid-type-min-size: 2;
-  --fluid-type-max-size: 4;
-  --fluid-type-min-screen: 20;
-  --fluid-type-max-screen: 88;
+.hexagon-logo:hover > polygon {
+  stroke-dasharray: 180;
+}
 
-  font-size: calc(
-    (var(--fluid-type-min-size) * 1rem) + (var(--fluid-type-max-size) - var(--fluid-type-min-size)) * (100vw - (var(--fluid-type-min-screen) * 1rem)) /
-      (var(--fluid-type-max-screen) - var(--fluid-type-min-screen))
-  );
+@keyframes animate-stroke {
+  to { stroke-dashoffset: 0; }
 }
