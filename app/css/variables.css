@@ -21,7 +21,7 @@
     --lighter-grey:   hsl(0 0% 5%);
     --lightest-grey:  hsl(0 0% 2%);
     
-    --brand: hsl(240 100% 50%);
-    --secondary: hsl(330 100% 71%);
+    --brand: hsl(330 100% 71%);
+    --secondary: hsl(240 100% 50%);
   }
 }
