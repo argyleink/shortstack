@@ -1,0 +1,25 @@
+.hexagon-logo {
+  margin-block-start: 10vmax;
+  max-width: 40vh;
+  fill: none;
+  stroke: var(--brand);
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: 10px;
+  cursor: crosshair;
+}
+  
+.hexagon-logo > polygon {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 1000;
+  transition: stroke-dasharray .3s ease;
+  animation: animate-stroke 3s ease-out-expo forwards;
+}
+
+.hexagon-logo:hover > polygon {
+  stroke-dasharray: 180;
+}
+
+@keyframes animate-stroke {
+  to { stroke-dashoffset: 0; }
+}

@@ -1,0 +1,27 @@
+:root {
+  /* use any of these! https://easings.net */
+
+  --darkest-grey:   hsl(0 0% 2%);
+  --darker-grey:    hsl(0 0% 5%);
+  --dark-grey:      hsl(0 0% 20%);
+  --grey:           hsl(0 0% 50%);
+  --light-grey:     hsl(0 0% 60%);
+  --lighter-grey:   hsl(0 0% 80%);
+  --lightest-grey:  hsl(0 0% 92%);
+
+  --brand: hsl(330 70% 75%);
+  --secondary: hsl(240 75% 60%);
+
+  @media(prefers-color-scheme: light) {
+    --darkest-grey:   hsl(0 0% 98%);
+    --darker-grey:    hsl(0 0% 90%);
+    --dark-grey:      hsl(0 0% 60%);
+    --grey:           hsl(0 0% 50%);
+    --light-grey:     hsl(0 0% 20%);
+    --lighter-grey:   hsl(0 0% 5%);
+    --lightest-grey:  hsl(0 0% 2%);
+    
+    --brand: hsl(240 100% 50%);
+    --secondary: hsl(330 100% 71%);
+  }
+}

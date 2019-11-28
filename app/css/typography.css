@@ -1,0 +1,15 @@
+body {
+  background: var(--darkest-grey);
+  color: var(--light-grey);
+  font-family: system-ui;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+h1,h2 {
+  font-weight: lighter;
+  letter-spacing: .2em;
+  color: var(--lighter-grey);
+}
