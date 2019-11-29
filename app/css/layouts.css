@@ -1,6 +1,4 @@
-body {
-  min-height: 100vh;
-  margin: 0;
+.centered-intrinsic-stack {
   display: flex;
   flex-direction: column;
   align-items: center;

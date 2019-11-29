@@ -1,27 +1,44 @@
+/* use any of these! https://easings.net */
+
 :root {
-  /* use any of these! https://easings.net */
+  --brand-hue: 330;
+  --brand-saturation: 70%;
+  --brand-lightness: 75%;
 
-  --darkest-grey:   hsl(0 0% 2%);
-  --darker-grey:    hsl(0 0% 5%);
-  --dark-grey:      hsl(0 0% 20%);
-  --grey:           hsl(0 0% 50%);
-  --light-grey:     hsl(0 0% 60%);
-  --lighter-grey:   hsl(0 0% 80%);
-  --lightest-grey:  hsl(0 0% 92%);
+  --brand1: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+  --brand2: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 7));
+  --brand3: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 12));
 
-  --brand: hsl(330 70% 75%);
-  --secondary: hsl(240 75% 60%);
+  --surface1: hsl(var(--brand-hue) 40% 3%);
+  --surface2: hsl(var(--brand-hue) 20% 10%);
 
-  @media(prefers-color-scheme: light) {
-    --darkest-grey:   hsl(0 0% 98%);
-    --darker-grey:    hsl(0 0% 90%);
-    --dark-grey:      hsl(0 0% 60%);
-    --grey:           hsl(0 0% 50%);
-    --light-grey:     hsl(0 0% 20%);
-    --lighter-grey:   hsl(0 0% 5%);
-    --lightest-grey:  hsl(0 0% 2%);
-    
-    --brand: hsl(330 100% 71%);
-    --secondary: hsl(240 100% 50%);
+  --shadow1: 0 4rem 6rem calc(var(--fs1) * -1) hsla(var(--brand-hue) 70% 15% / 60%);
+
+  --text1: hsl(var(--brand-hue) 40% 90%);
+  --text2: hsl(var(--brand-hue) 10% 80%);
+  --shadow1-grow: 0 7rem 3rem calc(5rem * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 40%);
+  
+  --fs1: 3rem;
+  --fs2: 2.25rem;
+  --fs3: 1.75rem;
+  --fs4: 1.25rem;
+  --fs5: 1rem;
+  --fs6: .8rem;
+
+  @media (prefers-color-scheme: light) {
+    --brand-lightness: 71%;
+    --brand-saturation: 100%;
+
+    --brand1: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+    --brand2: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 2.25));
+    --brand3: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 2));
+
+    --surface1: hsl(var(--brand-hue) 25% 96%);
+    --surface2: hsl(var(--brand-hue) 100% 99%);
+
+    --text1: hsl(var(--brand-hue) 50% 10%);
+    --text2: hsl(var(--brand-hue) 10% 30%);
+
+    --shadow1: 0 4rem 6rem calc(var(--fs1) * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 40%);
   }
 }
