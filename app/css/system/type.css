@@ -1,0 +1,34 @@
+body {
+  font-family: system-ui;
+  background: var(--surface1);
+  color: var(--text1);
+}
+
+h1,h2,h3,h4,h5,h6,
+p,ul,li,dl,dt,dd,
+q,blockquote {
+  color: var(--text1);
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1,h2 {
+  font-weight: lighter;
+  letter-spacing: .2em;
+}
+
+h1 { font-size: max(var(--fs1), 7vmax); }
+h2 { font-size: var(--fs2); }
+h3 { font-size: var(--fs3); }
+h4 { font-size: var(--fs4); }
+h5 { font-size: var(--fs5); }
+h6 { font-size: var(--fs6); }
+
+small {
+  color: var(--text2);
+  font-size: 1ex;
+}
+
+big {
+  font-size: max(2em, 5ex);
+}

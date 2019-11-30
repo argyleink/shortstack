@@ -1,0 +1,17 @@
+:root {
+  --fs1: 3rem;
+  --fs2: 2.25rem;
+  --fs3: 1.75rem;
+  --fs4: 1.25rem;
+  --fs5: 1rem;
+  --fs6: .8rem;
+
+  --space1: .25rem;
+  --space2: .5rem;
+  --space3: 1rem;
+  --space4: 1.25rem;
+  --space5: 2rem;
+  --space6: 4rem;
+  --space7: 6rem;
+  --space8: 10rem;
+}

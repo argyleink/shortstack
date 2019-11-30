@@ -1,6 +1,11 @@
 /* @import 'css-from-npm'; */
+/* use any of these! https://easings.net */
 
-@import './variables.css';
+@import './system/colors.css';
+@import './system/sizes.css';
+@import './system/type.css';
+@import './system/shadows.css';
+
 @import './typography.css';
 @import './elements.css';
 @import './layouts.css';
