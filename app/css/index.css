@@ -1,12 +1,7 @@
 /* @import 'css-from-npm'; */
+/* @import '//css-from-url'; */
+
 /* use any of these! https://easings.net */
 
-@import './system/colors.css';
-@import './system/sizes.css';
-@import './system/type.css';
-@import './system/shadows.css';
-
-@import './typography.css';
-@import './elements.css';
-@import './layouts.css';
-@import './hexagon.css';
+@import 'system/index.css';
+@import 'hexagon.css';

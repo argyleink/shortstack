@@ -1,8 +1,7 @@
 :root {
-  --shadow1: 0 4rem 6rem calc(var(--fs1) * -1) hsla(var(--brand-hue) 70% 15% / 60%);
-  --shadow1-grow: 0 7rem 3rem calc(5rem * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 40%);
+  --depth1: 0 var(--space3) var(--space6) calc(.95rem * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 30%);;
 
   @media (prefers-color-scheme: light) {
-    --shadow1: 0 4rem 6rem calc(var(--fs1) * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 40%);
+    --depth1: 0 var(--space3) var(--space5) calc(var(--fs2) * -1) hsla(var(--brand-hue) var(--brand-saturation) var(--brand-lightness) / 80%);
   }
 }

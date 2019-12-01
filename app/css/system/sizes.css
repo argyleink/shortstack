@@ -1,10 +1,14 @@
 :root {
-  --fs1: 3rem;
-  --fs2: 2.25rem;
-  --fs3: 1.75rem;
+  --fs1: .75rem;
+  --fs2: .9rem;
+  --fs3: 1rem;
   --fs4: 1.25rem;
-  --fs5: 1rem;
-  --fs6: .8rem;
+  --fs5: 1.75rem;
+  --fs6: 2.25rem;
+  --fs7: 3rem;
+  --fs8: max(4rem, 10vmax);
+
+  --reading-width: 50ch;
 
   --space1: .25rem;
   --space2: .5rem;

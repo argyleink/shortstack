@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+header {
+  min-height: 100vh;
+}
+
+ul, dl {
+  display: grid;
+  gap: var(--space3);
+  padding-inline-start: 3ch;
+
+  & > :is(li,dt,dd) {
+    max-width: var(--reading-width);
+  }
+}
+
+dl {
+  padding-inline-start: 0;
+  gap: var(--space3);
+
+  & > dt {
+    font-weight: bold;
+
+    &:not(:first-child) {
+      margin-block-start: var(--space3);
+    }
+  }
+}

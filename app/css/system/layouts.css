@@ -1,0 +1,13 @@
+[centered-intrinsic-grid-stack] {
+  --gap: var(--space3);
+  display: grid;
+  gap: var(--gap);
+  place-items: center;
+}
+
+[centered-intrinsic-flex-stack] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

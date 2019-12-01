@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir='ltr'>
   <head>
     <title>App Starter</title>
     <meta charset="utf-8">
@@ -11,13 +11,42 @@
 
     <link rel="stylesheet" href="bundle.css">
   </head>
-  <body class="centered-intrinsic-stack">
-    <h1>SHORTSTACK</h1>
-    <small>v2.0.0</small>
+  <body>
+    <header centered-intrinsic-grid-stack>
+      <div>
+        <h1>SHORTSTACK</h1>
+        <small>v2.0.0</small>
+      </div>
+      <svg class="hexagon" x="0px" y="0px" viewbox="-10 -10 320 320" xml:space="preserve">
+        <polygon points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+      </svg>
+    </header>
 
-    <svg class="hexagon-logo" x="0px" y="0px" viewbox="-10 -10 320 320" xml:space="preserve">
-      <polygon points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
-    </svg>
+    <main centered-intrinsic-grid-stack style="--gap: 10vmax;">
+      <h2>What's Included</h2>
+
+      <section>
+        <h3>Buttons</h3>
+        <button>Default Button</button>
+      </section>
+
+      <section>
+        <h3>Lists</h3>
+        <ul>
+          <li>List item 1</li>
+          <li>Two</li>
+          <li>3</li>
+        </ul>
+
+        <dl>
+          <dt>Definition Title</dt>
+          <dd>Description</dd>
+
+          <dt>Definition Title</dt>
+          <dd>Description</dd>
+        </dl>
+      </section>
+    </main>
 
     <script src="bundle.js" type="module" defer></script>
   </body>

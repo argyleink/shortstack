@@ -28,3 +28,7 @@
     --text2: hsl(var(--brand-hue) 10% 30%);
   }
 }
+
+:focus {
+  outline-color: var(--brand1);
+}

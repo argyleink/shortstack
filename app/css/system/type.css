@@ -12,17 +12,22 @@ q,blockquote {
   line-height: 1.1;
 }
 
+p, ul, dl {
+  font-size: var(--fs4);
+  font-weight: lighter;
+}
+
 h1,h2 {
   font-weight: lighter;
   letter-spacing: .2em;
 }
 
-h1 { font-size: max(var(--fs1), 7vmax); }
-h2 { font-size: var(--fs2); }
-h3 { font-size: var(--fs3); }
-h4 { font-size: var(--fs4); }
-h5 { font-size: var(--fs5); }
-h6 { font-size: var(--fs6); }
+h1 { font-size: max(var(--fs6), 5vmax) }
+h2 { font-size: var(--fs5); }
+h3 { font-size: var(--fs4); }
+h4 { font-size: var(--fs3); }
+h5 { font-size: var(--fs2); }
+h6 { font-size: var(--fs1); }
 
 small {
   color: var(--text2);

@@ -6,7 +6,9 @@ const importUrl         = require('postcss-import-url')
 module.exports = {
   plugins: [
     importUrl(),
-    postcssImport(),
+    postcssImport({
+      path: 'app/css',
+    }),
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,

@@ -1,0 +1,28 @@
+button {
+  background: var(--surface2);
+  border: 1px solid var(--surface1);
+  border-radius: var(--space1);
+  box-shadow: var(--depth1);
+  color: var(--text2);
+  font-size: var(--fs4);
+
+  position: relative;
+  margin: 0;
+  padding: var(--space3) var(--space5);
+
+  user-select: none;
+  tap-highlight-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--text1);
+  }
+
+  &:active {
+    top: 1px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
