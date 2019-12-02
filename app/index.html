@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="bundle.css">
   </head>
   <body>
-    <header centered-intrinsic-grid-stack>
+    <header grid="stack" grid-align="center">
       <div>
         <h1>SHORTSTACK</h1>
         <small>v2.0.0</small>
@@ -22,7 +22,7 @@
       </svg>
     </header>
 
-    <main centered-intrinsic-grid-stack style="--gap: 10vmax;">
+    <main grid="stack" style="--gap: var(--space6);">
       <h2>What's Included</h2>
 
       <section>
@@ -32,12 +32,15 @@
 
       <section>
         <h3>Lists</h3>
-        <ul>
+        <ol>
           <li>List item 1</li>
           <li>Two</li>
           <li>3</li>
-        </ul>
+        </ol>
+      </section>
 
+      <section>
+        <h3>Definition Lists</h3>
         <dl>
           <dt>Definition Title</dt>
           <dd>Description</dd>

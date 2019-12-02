@@ -1,13 +1,23 @@
-[centered-intrinsic-grid-stack] {
+[grid="stack"] {
   --gap: var(--space3);
+  
   display: grid;
   gap: var(--gap);
-  place-items: center;
+
+  &[grid-align="center"] {
+    place-items: center;
+  }
 }
 
-[centered-intrinsic-flex-stack] {
+[flex="stack"] {
+  --gap: var(--space3);
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: var(--gap);
+
+  &[grid-align="center"] {
+    align-items: center;
+    justify-content: center;
+  }
 }

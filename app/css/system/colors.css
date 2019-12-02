@@ -7,11 +7,11 @@
   --brand2: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 7));
   --brand3: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 12));
 
-  --text1: hsl(var(--brand-hue) 40% 90%);
+  --text1: hsl(var(--brand-hue) 20% 90%);
   --text2: hsl(var(--brand-hue) 10% 80%);
 
-  --surface1: hsl(var(--brand-hue) 40% 3%);
-  --surface2: hsl(var(--brand-hue) 20% 10%);
+  --surface1: hsl(var(--brand-hue) 25% 3%);
+  --surface2: hsl(var(--brand-hue) 5% 10%);
 
   @media (prefers-color-scheme: light) {
     --brand-lightness: 71%;

@@ -2,14 +2,18 @@ body {
   margin: 0;
 }
 
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 header {
   min-height: 100vh;
 }
 
-ul, dl {
+ul,ol,dl {
   display: grid;
   gap: var(--space3);
-  padding-inline-start: 3ch;
 
   & > :is(li,dt,dd) {
     max-width: var(--reading-width);
@@ -18,7 +22,7 @@ ul, dl {
 
 dl {
   padding-inline-start: 0;
-  gap: var(--space3);
+  gap: var(--space1);
 
   & > dt {
     font-weight: bold;

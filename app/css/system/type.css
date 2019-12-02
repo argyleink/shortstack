@@ -5,14 +5,14 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,
-p,ul,li,dl,dt,dd,
+p,ul,ol,li,dl,dt,dd,
 q,blockquote {
   color: var(--text1);
   margin: 0;
   line-height: 1.1;
 }
 
-p, ul, dl {
+p,ul,ol,dl {
   font-size: var(--fs4);
   font-weight: lighter;
 }
