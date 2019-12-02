@@ -11,6 +11,22 @@ header {
   min-height: 100vh;
 }
 
+section {
+  background: var(--surface2);
+  padding: var(--space3) var(--space4);
+  border-radius: var(--space1);
+  overflow: hidden;
+
+  &[outlined] {
+    background: none;
+    border: 1px solid var(--surface2);
+  }
+}
+
+footer {
+  min-height: 25vh;
+}
+
 ul,ol,dl {
   display: grid;
   gap: var(--space3);

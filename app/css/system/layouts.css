@@ -1,4 +1,5 @@
-[grid="stack"], [grid="intrinsic-stack"] {
+[grid="stack"], 
+[grid="intrinsic-stack"] {
   --gap: var(--space3);
 
   display: grid;
@@ -11,6 +12,14 @@
 
 [grid="intrinsic-stack"] {
   justify-content: start;
+}
+
+[grid="wrap"] {
+  --gap: var(--space3);
+
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--reading-width), 1fr));
 }
 
 [flex="stack"] {
