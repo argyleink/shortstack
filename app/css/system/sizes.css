@@ -2,11 +2,11 @@
   --fs1: .75rem;
   --fs2: .9rem;
   --fs3: 1rem;
-  --fs4: 1.25rem;
+  --fs4: 1.5rem;
   --fs5: 1.75rem;
   --fs6: 2.25rem;
   --fs7: 3rem;
-  --fs8: max(4rem, 10vmax);
+  --fs8: 5rem;
 
   --reading-width: 50ch;
 

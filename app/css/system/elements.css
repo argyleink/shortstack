@@ -14,10 +14,6 @@ header {
 ul,ol,dl {
   display: grid;
   gap: var(--space3);
-
-  & > :is(li,dt,dd) {
-    max-width: var(--reading-width);
-  }
 }
 
 dl {

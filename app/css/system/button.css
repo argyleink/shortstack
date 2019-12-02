@@ -1,4 +1,6 @@
 button {
+  display: inline-grid;
+  gap: var(--space3);
   background: var(--surface2);
   border: 1px solid var(--surface1);
   border-radius: var(--space1);

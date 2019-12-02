@@ -1,7 +1,9 @@
 :root {
-  --depth1: 0 var(--space3) var(--space5) calc(.95rem * -1) hsla(var(--brand-hue) 100% 5% / 100%);;
+  --shadow-saturation: 100%;
+
+  --depth1: 0 var(--space3) var(--space5) calc(.95rem * -1) hsla(var(--brand-hue) var(--shadow-saturation) 5% / 100%);;
 
   @media (prefers-color-scheme: light) {
-    --depth1: 0 var(--space3) var(--space5) calc(var(--fs2) * -1) hsla(var(--brand-hue) 100% 90% / 100%);
+    --depth1: 0 var(--space3) var(--space5) calc(var(--fs2) * -1) hsla(var(--brand-hue) var(--shadow-saturation) 90% / 100%);
   }
 }

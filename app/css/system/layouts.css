@@ -1,6 +1,6 @@
-[grid="stack"] {
+[grid="stack"], [grid="intrinsic-stack"] {
   --gap: var(--space3);
-  
+
   display: grid;
   gap: var(--gap);
 
@@ -9,14 +9,15 @@
   }
 }
 
-[flex="stack"] {
-  --gap: var(--space3);
+[grid="intrinsic-stack"] {
+  justify-content: start;
+}
 
+[flex="stack"] {
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
 
-  &[grid-align="center"] {
+  &[flex-align="center"] {
     align-items: center;
     justify-content: center;
   }
