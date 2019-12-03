@@ -1,7 +1,45 @@
 /* @import 'css-from-npm'; */
 /* @import '//css-from-url'; */
 
-/* use any of these! https://easings.net */
+/* CSS powers @ https://preset-env.cssdb.org/features */
+/* also, use any of these! https://easings.net */
 
-@import 'system/index.css';
-@import 'hexagon.css';
+:root {
+  --surface: hsl(0 0% 97%);
+  --text: hsl(0 0% 25%);
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.hex {
+  max-width: 40vh;
+  fill: none;
+  stroke: hotpink;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-width: .75rem;
+  cursor: crosshair;
+
+  & > polygon {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 1000;
+    transition: stroke-dasharray .3s ease;
+    animation: animate-stroke 3s ease-out-expo forwards;
+  }
+
+  &:hover > polygon {
+    stroke-dasharray: 180;
+  }
+}
+
+@keyframes animate-stroke {
+  to { stroke-dashoffset: 0; }
+}
