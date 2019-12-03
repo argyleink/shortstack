@@ -6,7 +6,7 @@ import { default as importHTTP } from 'import-http/rollup'
 const isProd = process.env.NODE_ENV === 'production'
 
 const devConfig = {
-  input: 'app/index.js',
+  input: 'app/js/index.js',
   output: {
     file: 'app/bundle.js',
     format: 'esm',
@@ -25,7 +25,7 @@ const devConfig = {
 }
 
 const prodConfig = {
-  input: 'app/index.js',
+  input: 'app/js/index.js',
   output: {
     file: 'dist/bundle.js',
     format: 'esm',
