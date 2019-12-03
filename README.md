@@ -7,6 +7,10 @@
 ### Dev Server ›
 [Browsersync](https://www.browsersync.io) with all the goodies: **live reload**, **hot swap CSS**, **scroll syncing**, **remote debugging**, [etc](https://www.browsersync.io).
 
+<br>
+
+> Watch me break it down on [YouTube!](https://links.argyle.ink/shortstack)
+
 <br><br>
 
 ## Getting Started
@@ -20,8 +24,3 @@ Running `npm start` runs Browsersync, which watches changes to your files in `./
 
 ## Production
 Running `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready for static hosting.
-
-<br><br>
-
-#### Note:
-This is meant to be built upon but is currently great for small projects and prototypes. 
