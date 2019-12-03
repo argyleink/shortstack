@@ -2,7 +2,7 @@
 [Rollup](https://rollupjs.org) to **bundle**, **treeshake**, **import from NPM, local or URLs**, and **import CSS**. 
 
 ### CSS ›
-[PostCSS](https://postcss.org) to **import from NPM, local or URLs**, [postcss-preset-env](https://preset-env.cssdb.org/) for **CSS features from the spec**, and handy [easings](https://easings.net). 
+[PostCSS](https://postcss.org) to  **bundle**, **import from NPM, local or URLs**, [postcss-preset-env](https://preset-env.cssdb.org/) for **CSS features from the spec**, and handy [easings](https://easings.net). 
 
 ### Dev Server ›
 [Browsersync](https://www.browsersync.io) with all the goodies: **live reload**, **hot swap CSS**, **scroll syncing**, **remote debugging**, [etc](https://www.browsersync.io).
