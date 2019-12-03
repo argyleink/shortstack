@@ -10,9 +10,11 @@ const browsers = [
 
 module.exports = {
   plugins: [
-    postcsseasings(),
     importUrl(),
-    postcssImport(),
+    postcssImport({
+      path: 'app/css',
+    }),
+    postcsseasings(),
     postcssPresetEnv({
       stage: 0,
       browsers,
