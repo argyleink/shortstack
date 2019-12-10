@@ -1,0 +1,7 @@
+:host {
+  display: grid;
+
+  & > div {
+    color: var(--brand);
+  }
+}

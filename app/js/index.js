@@ -1,6 +1,5 @@
 // import Whatever from 'https://unpkg.com/whatever'
 // import Whatever from 'whatever'
+import CustomElement from './custom-element/custom.element.js'
 
-// import { default as index_css }  from './css/index.css'
-// console.info(index_css)
-console.log('💀🤘')
+console.log(CustomElement)
