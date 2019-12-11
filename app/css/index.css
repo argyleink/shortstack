@@ -26,29 +26,12 @@ body {
   place-items: center;
 }
 
-.hex {
-  max-width: 40vh;
-  fill: none;
-  stroke: var(--brand);
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  stroke-width: .75rem;
-  cursor: crosshair;
+.painty {
+  background-image: paint(painty);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
 
-  & > polygon {
-    stroke-dasharray: 150;
-    stroke-dashoffset: 1000;
-    transform-origin: center;
-    transition: stroke-dasharray 2s ease, transform 2s ease;
-    animation: animate-stroke 3s ease-out-expo forwards;
+  & > * {
+    margin: 0;
   }
-
-  &:hover > polygon {
-    stroke-dasharray: 250;
-    transform: rotateZ(15deg);
-  }
-}
-
-@keyframes animate-stroke {
-  to { stroke-dashoffset: 0; }
 }
