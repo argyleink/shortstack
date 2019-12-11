@@ -8,7 +8,7 @@ const plugins = process.env.NODE_ENV === 'production'
 const config = {
   input: 'app/houdini/index.js',
   output: {
-    file: 'app/houdini.bundle.js',
+    file: 'app/houdini.entry.js',
     format: 'esm',
     sourcemap: 'inline',
   },
