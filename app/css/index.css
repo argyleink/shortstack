@@ -39,4 +39,9 @@ body {
   & > * {
     margin: 0;
   }
+
+  /* transition: --painty-hue-start 2s ease, --painty-step-width 2s ease;
+  &:hover {
+    --painty-step-width: 150;
+  } */
 }
