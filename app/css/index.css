@@ -27,10 +27,11 @@ body {
 }
 
 .painty {
-  --painty-hue-start: 200;
+  /* --painty-hue-start: 200;
   --painty-step-size: 5;
-  --painty-step-width: 30;
+  --painty-step-width: 30; */
   background-image: paint(painty);
+  color: white;
 
   border-radius: 1rem;
   padding: 1rem 2rem;

@@ -12,7 +12,7 @@ registerPaint(paint_name, class Painty {
 
   paint(ctx, bounds, props) {
     const { width:w, height:h } = bounds
-    const [start_hue, step_size, step_width] = this.parseProps(props)
+    const [start_hue = 0, step_size = 10, step_width = 25] = this.parseProps(props)
 
     for (let y = 0; y < h; y++) {
       for (let x = 0; x < w; x++) {
@@ -28,6 +28,6 @@ registerPaint(paint_name, class Painty {
 
   parseProps(props) {
     return params.map(param =>
-      parseInt(props.get(param).toString()))
+      parseInt(props.get(param).toString()) || undefined)
   }
 })
