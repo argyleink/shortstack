@@ -1,18 +1,18 @@
-export default class Painty {
+const paint_name = 'painty'
+const params = [
+  `--${paint_name}-hue-start`,
+  `--${paint_name}-step-size`,
+  `--${paint_name}-step-width`,
+]
+
+registerPaint(paint_name, class Painty {
   static get inputProperties() {
-    return [
-      '--painty-hue-start',
-      '--painty-step-size',
-      '--painty-step-width',
-    ]
+    return params
   }
 
   paint(ctx, bounds, props) {
     const { width:w, height:h } = bounds
-
-    const start_hue = parseInt(props.get('--painty-hue-start').toString())
-    const step_size = parseInt(props.get('--painty-step-size').toString())
-    const step_width = parseInt(props.get('--painty-step-width').toString())
+    const [start_hue, step_size, step_width] = this.parseProps(props)
 
     for (let y = 0; y < h; y++) {
       for (let x = 0; x < w; x++) {
@@ -25,9 +25,9 @@ export default class Painty {
       }
     }
   }
-}
 
-if (typeof registerPaint === undefined) 
-  console.warn('register paint not supported')
-else
-  registerPaint('painty', Painty)
+  parseProps(props) {
+    return params.map(param =>
+      parseInt(props.get(param).toString()))
+  }
+})

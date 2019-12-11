@@ -1,9 +1,11 @@
-const registrar = new Set([
-  { name: 'Painty', path: 'painty.worklet.js'}
-])
+(async function() {
+  const registrar = new Set([
+    { name: 'Painty', path: 'painty.worklet.js'}
+  ])
 
-if ('paintWorklet' in CSS) 
+  if (CSS['paintWorklet'] === undefined)
+    await import('https://unpkg.com/css-paint-polyfill/dist/css-paint-polyfill.js')
+
   registrar.forEach(({path}) =>
     CSS.paintWorklet.addModule(`/houdini/${path}`))
-else
-  console.warn('Paint worklet not supported')
+})()
