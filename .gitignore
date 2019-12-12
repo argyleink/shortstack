@@ -2,5 +2,5 @@ dist/
 node_modules/
 app/bundle.css
 app/bundle.js
-app/houdini.bundle.js
+app/houdini.entry.js
 .DS_Store
