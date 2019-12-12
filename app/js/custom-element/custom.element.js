@@ -7,7 +7,7 @@ export default class CustomElement extends HTMLElement {
     super()
 
     this.$shadow            = this.attachShadow({mode: 'closed'})
-    this.$shadow.innerHTML  = this.render()
+    this.$shadow.innerHTML  = this.render({name: 'My Custom Element'})
 
     this.styles = constructStylesheet(styles)
   }
@@ -18,9 +18,9 @@ export default class CustomElement extends HTMLElement {
 
   disconnectedCallback() {}
 
-  render() {
+  render({name}) {
     return `
-      <div>Custom Element</div>
+      <div>${name}</div>
     `
   }
 }
