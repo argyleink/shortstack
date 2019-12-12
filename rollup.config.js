@@ -16,7 +16,7 @@ const devConfig = {
     resolve(),
     importHTTP(),
     postcss({
-      inject:  false,
+      inject: false,
     }),
   ],
   watch: {
@@ -35,7 +35,8 @@ const prodConfig = {
     resolve(),
     importHTTP(),
     postcss({
-      extract: true,
+      extract: false,
+      inject: false,
       minimize: { preset: 'default' },
     }),
     terser(),
