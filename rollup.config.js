@@ -39,8 +39,8 @@ const prodConfig = {
       extract: true,
       minimize: { preset: 'default' },
     }),
-    terser(),
     compiler(),
+    terser(),
   ]
 }
 
