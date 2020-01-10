@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
+import compiler from '@ampproject/rollup-plugin-closure-compiler'
 import { default as importHTTP } from 'import-http/rollup'
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -38,6 +39,7 @@ const prodConfig = {
       extract: true,
       minimize: { preset: 'default' },
     }),
+    compiler(),
     terser(),
   ]
 }
