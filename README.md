@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/59a03ed4-bf70-4441-b65c-200bcd61c013/deploy-status)](https://app.netlify.com/sites/shortstax/deploys)
 
 ### Javascript ›
-[Rollup](https://rollupjs.org) to **bundle**, **treeshake**, **import from NPM, local or URLs**, and **import CSS**. 
+[Rollup](https://rollupjs.org) to **bundle**, **treeshake**, **import from NPM, local or remote URLs**, and **import CSS**. 
 
 ### CSS ›
 [PostCSS](https://postcss.org) to  **bundle**, **import from NPM, local or URLs**, [postcss-preset-env](https://preset-env.cssdb.org/) for **CSS features from the spec**, and handy [easings](https://easings.net). 
@@ -26,3 +26,5 @@ Running `npm start` runs Browsersync, which watches changes to your files in `./
 
 ## Production
 Running `npm run build` compiles and minifies your code in `app` and outputs the optimised result to a folder called `dist` that's ready for static hosting.
+
+Running `npm run production` will build your project and start a server at `dist`. Useful for continuous delivery.
