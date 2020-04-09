@@ -1,8 +1,20 @@
-/* @import 'css-from-npm'; */
-/* @import '//css-from-url'; */
+/* 
+(bundle from remote urls) 
+@import '//css-from-url';
 
-/* CSS powers @ https://preset-env.cssdb.org/features */
-/* also, use any of these! https://easings.net */
+(bundle from npm)
+@import 'css-from-npm';
+
+(bundle from local)
+@import 'localfile.css' 
+
+(PresetENV)
+CSS powers @ https://preset-env.cssdb.org/features
+
+(Easings)
+only imports what you use 
+https://easings.net
+*/
 
 :root {
   --surface: gray(10);
@@ -21,7 +33,7 @@ body {
   background: var(--surface);
   color: var(--text);
   font-family: system-ui;
-  min-height: 100vh;
+  min-block-size: 100vh;
   display: grid;
   place-items: center;
 }
