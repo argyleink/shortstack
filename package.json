@@ -1,36 +1,39 @@
 {
   "name": "shortstack",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Adam Argyle",
-  "description": "simple starter",
+  "description": "rollup bundler starter",
   "main": "index.js",
   "scripts": {
     "dev:js": "rollup -c -w",
     "dev:css": "postcss app/css/index.css -o app/bundle.css -w",
-    "dev:server": "browser-sync start --server 'app' --files 'app/index.html,app/bundle.css,app/bundle.js' --no-open",
+    "dev:server": "browser-sync start --server 'app' --files 'app/**/*, !app/css/**, !app/js/**' --no-open --no-notify",
+    "prod:server": "browser-sync dist --no-open --no-notify --no-ghost-mode",
     "build:pre:js": "rollup -c --environment NODE_ENV:production",
     "build:pre:css": "postcss app/css/index.css -o dist/bundle.css",
     "build:post:copy": "cp app/index.html dist/index.html",
     "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
-    "start": "concurrently --kill-others npm:dev:*"
+    "start": "concurrently --kill-others npm:dev:*",
+    "production": "npm run build && npm run prod:server"
   },
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@ampproject/rollup-plugin-closure-compiler": "0.24.0",
     "browser-sync": "2.26.7",
-    "concurrently": "5.0.0",
+    "concurrently": "5.1.0",
     "doiuse": "^4.2.0",
     "import-http": "^0.3.1",
-    "postcss": "7.0.18",
-    "postcss-cli": "6.1.3",
+    "postcss": "7.0.27",
+    "postcss-cli": "7.1.0",
     "postcss-easings": "^2.0.0",
     "postcss-import": "^12.0.1",
-    "postcss-import-url": "^4.0.0",
+    "postcss-import-url": "^5.1.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "6.7.0",
-    "rollup": "1.25.0",
+    "rollup": "2.3.4",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-terser": "^5.1.2"
+    "rollup-plugin-postcss": "^2.5.0",
+    "rollup-plugin-terser": "^5.3.0"
   }
 }
