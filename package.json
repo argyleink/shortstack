@@ -14,14 +14,23 @@
     "build:post:copy": "cp app/index.html dist/index.html",
     "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
     "start": "concurrently --kill-others npm:dev:*",
-    "production": "npm run build && npm run prod:server"
+    "production": "npm run build && npm run prod:server",
+    "lint": "stylelint app/css/index.css"
   },
   "license": "ISC",
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "number-leading-zero": null,
+      "no-eol-whitespace": null
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "0.24.0",
     "browser-sync": "2.26.7",
     "concurrently": "5.1.0",
+    "doiuse": "^4.2.0",
     "import-http": "^0.3.1",
     "postcss": "7.0.27",
     "postcss-cli": "7.1.0",
@@ -33,6 +42,8 @@
     "rollup": "2.3.4",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-terser": "^5.3.0"
+    "rollup-plugin-terser": "^5.3.0",
+    "stylelint": "^13.3.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
