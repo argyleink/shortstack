@@ -11,4 +11,4 @@
 // (file as string)
 // import { default as index_css }  from './css/index.css'
 
-console.log('💀')
+console?.log('💀')
