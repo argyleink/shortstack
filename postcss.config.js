@@ -12,9 +12,6 @@ module.exports = {
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,
-      browsers: [
-        'defaults',
-      ],
     }),
   ]
 }
