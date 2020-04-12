@@ -16,6 +16,10 @@
 <br><br>
 
 ## Getting Started
+[use this as a Github template](https://github.com/argyleink/shortstack/generate)
+
+OR
+
 #### Clone Shortstack into a new folder
 1. `mkdir new-project-name && cd $_`
 1. `git clone --depth=1 https://github.com/argyleink/shortstack.git . && rm -rf ./.git`
