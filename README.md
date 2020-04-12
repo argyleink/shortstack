@@ -28,6 +28,8 @@ OR
 1. `npm i`
 1. `npm start`
 
+<br><br>
+
 ## Development
 Running `npm start` runs Browsersync, Rollup and Postcss concurrently, watching changes to your files in `./app` and refreshes connected browsers.
 
