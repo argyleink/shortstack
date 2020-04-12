@@ -25,7 +25,7 @@ const devConfig = {
       "presets": [
         ["@babel/env", {"modules": false}]
       ]
-    })
+    }),
   ],
   watch: {
     exclude: ['node_modules/**'],
@@ -45,6 +45,12 @@ const prodConfig = {
     postcss({
       extract: true,
       minimize: { preset: 'default' },
+    }),
+    babel({
+      exclude: 'node_modules/**',
+      "presets": [
+        ["@babel/env", {"modules": false}]
+      ]
     }),
     compiler(),
     terser(),
