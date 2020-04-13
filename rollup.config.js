@@ -23,7 +23,10 @@ const devConfig = {
     babel({
       exclude: 'node_modules/**',
       "presets": [
-        ["@babel/env", {"modules": false}]
+        ["@babel/env", {
+          targets: { esmodules: true },
+          bugfixes: true,
+        }]
       ]
     }),
   ],
