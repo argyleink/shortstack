@@ -12,7 +12,6 @@ module.exports = {
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,
-      preserve: true,
     }),
   ]
 }
