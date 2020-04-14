@@ -16,19 +16,8 @@ only imports what you use
 https://easings.net
 */
 
+@import 'vars';
 @import 'hex';
-
-:root {
-  --surface: lch(10 0 0);
-  --text: lch(80 0 0);
-  --brand: lch(64 40 347);
-
-  @media (prefers-color-scheme: light) {
-    --surface: lch(98 0 0);
-    --text: lch(30 0 0);
-    --brand: lch(65 64 350)
-  }
-}
 
 body {
   margin: 0;
