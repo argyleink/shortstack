@@ -1,18 +1,30 @@
-/* @import 'css-from-npm'; */
-/* @import '//css-from-url'; */
+/* 
+(bundle from remote urls) 
+@import '//css-from-url';
 
-/* CSS powers @ https://preset-env.cssdb.org/features */
-/* also, use any of these! https://easings.net */
+(bundle from npm)
+@import 'css-from-npm';
+
+(bundle from local)
+@import 'localfile.css' 
+
+(PresetENV)
+CSS powers @ https://preset-env.cssdb.org/features
+
+(Easings)
+only imports what you use 
+https://easings.net
+*/
 
 :root {
-  --surface: gray(10);
-  --text: gray(80);
-  --brand: hsl(330 60% 71%);
+  --surface: lch(10 0 0);
+  --text: lch(80 0 0);
+  --brand: lch(64 40 347);
 
   @media (prefers-color-scheme: light) {
-    --surface: gray(98);
-    --text: gray(30);
-    --brand: hsl(330 100% 71%);
+    --surface: lch(98 0 0);
+    --text: lch(30 0 0);
+    --brand: lch(65 64 350)
   }
 }
 
@@ -21,7 +33,7 @@ body {
   background: var(--surface);
   color: var(--text);
   font-family: system-ui;
-  min-height: 100vh;
+  min-block-size: 100vh;
   display: grid;
   place-items: center;
 }
