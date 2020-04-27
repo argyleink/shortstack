@@ -4,9 +4,7 @@ const postcsseasings    = require('postcss-easings')
 const importUrl         = require('postcss-import-url')
 const cssnano           = require('cssnano')
 
-const isProd = process.env.NODE_ENV === 'production'
-
-const devConfig = {
+const dev = {
   plugins: [
     importUrl(),
     postcssImport({
@@ -19,7 +17,7 @@ const devConfig = {
   ]
 }
 
-const prodConfig = {
+const prod = {
   plugins: [
     importUrl(),
     postcssImport({
@@ -35,4 +33,6 @@ const prodConfig = {
   ]
 }
 
-module.exports = isProd ? prodConfig : devConfig
+module.exports = process.env.NODE_ENV === 'production' 
+  ? prod 
+  : dev

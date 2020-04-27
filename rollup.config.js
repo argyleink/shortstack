@@ -6,9 +6,7 @@ import compiler from '@ampproject/rollup-plugin-closure-compiler'
 import { default as importHTTP } from 'import-http/rollup'
 import babel from 'rollup-plugin-babel'
 
-const isProd = process.env.NODE_ENV === 'production'
-
-const devConfig = {
+const dev = {
   input: 'app/js/index.js',
   output: {
     file: 'app/bundle.js',
@@ -37,7 +35,7 @@ const devConfig = {
   }
 }
 
-const prodConfig = {
+const prod = {
   input: 'app/js/index.js',
   output: {
     file: 'dist/bundle.js',
@@ -62,4 +60,7 @@ const prodConfig = {
   ]
 }
 
-export default isProd ? prodConfig : devConfig
+export default process.env.NODE_ENV === 'production' 
+  ? prod 
+  : dev
+
