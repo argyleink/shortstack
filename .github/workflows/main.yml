@@ -10,10 +10,10 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Test .dist
+      - name: Test dist/
         uses: treosh/lighthouse-ci-action@v2
         env:
           LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+          staticDistDir: ./dist
         with:
-          staticDistDir: ./build
           uploadArtifacts: true
