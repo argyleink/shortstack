@@ -14,6 +14,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         env:
           LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
-          staticDistDir: ./dist
         with:
-          uploadArtifacts: true
+          configPath: './lighthouserc.json'
