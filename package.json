@@ -1,6 +1,6 @@
 {
   "name": "shortstack",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "author": "Adam Argyle",
   "description": "rollup & postcss bundler starter",
   "license": "ISC",
