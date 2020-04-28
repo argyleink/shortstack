@@ -1,5 +1,4 @@
 import resolve from '@rollup/plugin-node-resolve'
-import auto from '@rollup/plugin-auto-install'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import compiler from '@ampproject/rollup-plugin-closure-compiler'
@@ -14,7 +13,6 @@ const dev = {
     sourcemap: 'inline',
   },
   plugins: [
-    auto(),
     resolve(),
     importHTTP(),
     postcss({
