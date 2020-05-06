@@ -29,13 +29,17 @@ https://easings.net
 }
 
 body {
-  margin: 0;
   background: var(--surface);
   color: var(--text);
   font-family: system-ui;
   min-block-size: 100vh;
   display: grid;
   place-items: center;
+}
+
+body,p,ul,figure,
+h1,h2,h3,h4,h5,h6,small {
+  margin: 0;
 }
 
 .hex {
@@ -50,14 +54,19 @@ body {
   & > polygon {
     stroke-dasharray: 150;
     stroke-dashoffset: 1000;
-    transform-origin: center;
-    transition: stroke-dasharray 2s ease, transform 2s ease;
-    animation: animate-stroke 3s ease-out-expo forwards;
   }
 
-  &:hover > polygon {
-    stroke-dasharray: 250;
-    transform: rotateZ(15deg);
+  @media (prefers-reduced-motion: no-preference) {
+    & > polygon {
+      transform-origin: center;
+      transition: stroke-dasharray 2s ease, transform 2s ease;
+      animation: animate-stroke 3s ease-out-expo forwards;
+    }
+
+    &:hover > polygon {
+      stroke-dasharray: 250;
+      transform: rotateZ(15deg);
+    }
   }
 }
 
