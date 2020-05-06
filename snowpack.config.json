@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build:js": "babel --no-babelrc",
+    "build:css": "postcss",
+    "mount:public": "mount public --to /"
+  }
+}

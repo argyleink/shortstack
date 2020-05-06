@@ -8,7 +8,7 @@ const dev = {
   plugins: [
     importUrl(),
     postcssImport({
-      path: 'app/css',
+      path: 'src/css',
     }),
     postcsseasings(),
     postcssPresetEnv({
@@ -21,7 +21,7 @@ const prod = {
   plugins: [
     importUrl(),
     postcssImport({
-      path: 'app/css',
+      path: 'src/css',
     }),
     postcsseasings(),
     postcssPresetEnv({
