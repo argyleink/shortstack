@@ -4,7 +4,7 @@
 // (bundle from npm)
 // import Whatever from 'whatever'
 // (auto-install's new npm packages to deps)
-// import $ from 'blingblingjs'
+import $ from 'blingblingjs'
 
 // (bundle from local)
 // import whatever from './whatever.js'
