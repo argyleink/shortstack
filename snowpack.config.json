@@ -8,5 +8,8 @@
   },
   "plugins": [
     "@snowpack/plugin-babel"
-  ]
+  ],
+  "devOptions": {
+    "out": "dist"
+  }
 }
