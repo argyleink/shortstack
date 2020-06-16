@@ -26,7 +26,7 @@ OR
 
 OR (essentially the same thing with npx+degit)
 
-1. `npx degit argyleink/shortstack`
+1. `npx degit argyleink/shortstack#main`
 
 #### Install tools and spin it up
 1. `npm i`
