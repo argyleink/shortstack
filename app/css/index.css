@@ -24,7 +24,11 @@ https://easings.net
   @media (prefers-color-scheme: light) {
     --surface: lch(98 0 0);
     --text: lch(30 0 0);
-    --brand: lch(65 64 350)
+    --brand: lch(65 64 350);
+
+    @media (dynamic-range: high) {
+      --brand: color(display-p3 1 0 1);
+    }
   }
 }
 
@@ -42,12 +46,14 @@ h1,h2,h3,h4,h5,h6,small {
   margin: 0;
 }
 
-::selection {
-  background-color: var(--brand);
-}
+a {
+  color: color(display-p3 0 .5 1);
 
-
+  &:visited {
+    color: color(display-p3 .5 0 1);
   }
 }
 
+::selection {
+  background-color: var(--brand);
 }
