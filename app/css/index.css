@@ -35,14 +35,27 @@ body {
   font-family: system-ui;
   min-block-size: 100vh;
   display: flex;
+  gap: 2vmin;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+@property --painty-step-width {
+  syntax: '<number>';
+  initial-value: 20;
+  inherits: false;
+}
+
+@property --painty-step-width {
+  syntax: '<number>';
+  initial-value: 20;
+  inherits: false;
+}
+
 .painty {
-  /* --painty-hue-start: 200;
-  --painty-step-size: 5;
+  --painty-hue-start: 200;
+  /* --painty-step-size: 5;
   --painty-step-width: 30; */
   background-image: paint(painty);
   color: white;
@@ -54,8 +67,27 @@ body {
     margin: 0;
   }
 
-  /* transition: --painty-hue-start 2s ease, --painty-step-width 2s ease;
+  transition: --painty-hue-start 2s ease, --painty-step-width 2s ease;
   &:hover {
     --painty-step-width: 150;
-  } */
+  }
+}
+
+.static-gradient {
+  background-image: paint(static-gradient);
+  color: white;
+
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.powdered-gradient {
+  background-image: 
+    paint(powdered-gradient)
+    /* linear-gradient(white, white) */
+  ;
+  color: white;
+
+  border-radius: 1rem;
+  padding: 1rem 2rem;
 }

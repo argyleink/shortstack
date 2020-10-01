@@ -4,6 +4,8 @@
 
   const registrar = new Set([
     'painty.worklet.js',
+    'static-gradient.worklet.js',
+    'powdered-gradient.worklet.js',
   ])
   
   registrar.forEach(worklet =>
