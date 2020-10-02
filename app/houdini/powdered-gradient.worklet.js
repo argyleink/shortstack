@@ -13,7 +13,6 @@ registerPaint(paint_name, class PowderedGradient {
   paint(ctx, bounds, props) {
     const { width:w, height:h } = bounds
     const [
-      hue = 330, 
       step_width = .1
     ] = this.parseProps(props)
 
@@ -24,9 +23,9 @@ registerPaint(paint_name, class PowderedGradient {
         ctx.beginPath()
         ctx.arc(x, y, step_width + this.greaterRandom(), 0, 2 * Math.PI)
         ctx.fillStyle = `hsl(
-          ${hue} 
-          70%
-          60%
+          0 
+          0%
+          100%
           / 10%
         )`
         ctx.fill()

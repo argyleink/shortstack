@@ -41,7 +41,25 @@ body {
   justify-content: center;
 }
 
-@property --painty-step-width {
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.demo {
+  color: white;
+  padding: 1rem;
+  font-size: 4vmin;
+
+  & > h2 {
+    font-size: 1.5em;
+  }
+
+  & > h4 {
+    font-size: 1em;
+  }
+}
+
+/* @property --painty-step-width {
   syntax: '<number>';
   initial-value: 20;
   inherits: false;
@@ -51,13 +69,13 @@ body {
   syntax: '<number>';
   initial-value: 20;
   inherits: false;
-}
+} */
 
 .painty {
   --painty-hue-start: 200;
   /* --painty-step-size: 5;
-  --painty-step-width: 30; */
-  background-image: paint(painty);
+  --painty-step-width: 30; 
+  background-image: paint(painty);*/
   color: white;
 
   border-radius: 1rem;
@@ -73,20 +91,27 @@ body {
   }
 }
 
-.static-gradient {
-  background-image: paint(static-gradient);
-  color: white;
+.static-border {
+  border: 30px solid cyan;
+  border-image: paint(static-gradient, 180deg, hotpink, 2) 30 30 round;
+}
 
-  border-radius: 1rem;
-  padding: 1rem 2rem;
+.static-text {
+  background-image: 
+    paint(static-gradient, 0deg, white, 3),
+    linear-gradient(to bottom, hsl(200 100% 50% / 50%), hsl(200 100% 100%))
+  ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .powdered-gradient {
   background-image: 
-    paint(powdered-gradient)
-    /* linear-gradient(white, white) */
+    paint(powdered-gradient),
+    linear-gradient(to left, hotpink, rebeccapurple)
   ;
   color: white;
+  text-shadow: 0 1px 2px hotpink;
 
   border-radius: 1rem;
   padding: 1rem 2rem;

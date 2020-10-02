@@ -3,7 +3,6 @@
     await import('https://unpkg.com/css-paint-polyfill/dist/css-paint-polyfill.js')
 
   const registrar = new Set([
-    'painty.worklet.js',
     'static-gradient.worklet.js',
     'powdered-gradient.worklet.js',
   ])
