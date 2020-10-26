@@ -16,7 +16,7 @@
     "build:pre:js": "rollup -c --environment NODE_ENV:production",
     "build:pre:css": "postcss app/css/index.css -o dist/bundle.css --env production",
     "build:post:copy": "cp app/index.html dist/index.html",
-    "build": "rm -rf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
+    "build": "rimraf dist && concurrently npm:build:pre:* && concurrently npm:build:post:*",
     "start": "concurrently --kill-others npm:dev:*",
     "production": "npm run build && npm run prod:server"
   },
@@ -36,6 +36,7 @@
     "postcss-import-url": "^5.1.0",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "6.7.0",
+    "rimraf": "^3.0.2",
     "rollup": "2.12.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-postcss": "^3.1.1",
