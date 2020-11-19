@@ -13,6 +13,9 @@ const dev = {
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,
+      features: {
+        'logical-properties-and-values': false,
+      }
     }),
   ]
 }
@@ -26,6 +29,9 @@ const prod = {
     postcsseasings(),
     postcssPresetEnv({
       stage: 0,
+      features: {
+        'logical-properties-and-values': false,
+      }
     }),
     cssnano({
       preset: 'default'
