@@ -85,3 +85,9 @@ p {
 ::selection {
   background-color: var(--brand);
 }
+
+:focus {
+  outline-color: var(--brand);
+  outline-width: 3px;
+  outline-offset: 5px;
+}

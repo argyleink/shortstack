@@ -1,5 +1,4 @@
-dist/
+.cache/
 node_modules/
-app/bundle.css
-app/bundle.js
+bundle.css
 .DS_Store
