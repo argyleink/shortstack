@@ -11,8 +11,9 @@
   "scripts": {
     "dev:wmr": "wmr",
     "dev:css": "postcss public/css/index.css -o public/css/bundle.css -w",
+    "build:css": "postcss public/css/index.css -o public/css/bundle.css --env production",
     "start": "concurrently --kill-others npm:dev:*",
-    "production": "wmr serve --http2"
+    "production": "npm:build:* && wmr serve --http2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
