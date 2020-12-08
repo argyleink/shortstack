@@ -1,3 +1,3 @@
 import $ from 'blingblingjs'
-import '../css/index.css'
+// import '../css/index.css'
 console?.log($('body'))
