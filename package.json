@@ -1,6 +1,6 @@
 {
   "name": "shortstack",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "author": "Adam Argyle",
   "description": "wmr & postcss starter",
   "license": "ISC",
@@ -9,23 +9,13 @@
     "defaults"
   ],
   "scripts": {
-    "dev:wmr": "wmr",
-    "dev:css": "postcss public/css/index.css -o public/css/bundle.css -w -v",
-    "build:css": "postcss public/css/index.css -o public/css/bundle.css --env production",
-    "start": "concurrently --kill-others npm:dev:*",
-    "production": "npm:build:* && wmr serve --http2"
+    "start": "wmr",
+    "build": "wmr build",
+    "production": "wmr build && wmr serve --http2"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "cssnano": "^4.1.10",
-    "postcss": "^8.2.4",
-    "postcss-cli": "^8.3.1",
     "postcss-easings": "^3.0.1",
-    "postcss-import": "^14.0.0",
-    "postcss-import-url": "^6.0.0",
-    "postcss-loader": "^4.1.0",
     "postcss-preset-env": "6.7.0",
     "wmr": "latest"
-  },
-  "dependencies": {}
+  }
 }
