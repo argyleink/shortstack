@@ -3,7 +3,7 @@ import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import compiler from '@ampproject/rollup-plugin-closure-compiler'
 import { default as importHTTP } from 'import-http/rollup'
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 
 const dev = {
   input: 'app/js/index.js',
@@ -16,7 +16,7 @@ const dev = {
     resolve(),
     importHTTP(),
     postcss({
-      inject:  false,
+      inject: false,
     }),
     babel({
       exclude: 'node_modules/**',
@@ -50,7 +50,7 @@ const prod = {
     babel({
       exclude: 'node_modules/**',
       "presets": [
-        ["@babel/env", {"modules": false}]
+        ["@babel/env", { "modules": false }]
       ]
     }),
     compiler(),
@@ -58,7 +58,7 @@ const prod = {
   ]
 }
 
-export default process.env.NODE_ENV === 'production' 
-  ? prod 
+export default process.env.NODE_ENV === 'production'
+  ? prod
   : dev
 
