@@ -1,6 +1,5 @@
 const postcssPresetEnv  = require('postcss-preset-env')
 const postcssImport     = require('postcss-import')
-const postcsseasings    = require('postcss-easings')
 const importUrl         = require('postcss-import-url')
 const cssnano           = require('cssnano')
 
@@ -10,7 +9,6 @@ const dev = {
     postcssImport({
       path: 'app/css',
     }),
-    postcsseasings(),
     postcssPresetEnv({
       stage: 0,
       features: {
@@ -28,7 +26,6 @@ const prod = {
     postcssImport({
       path: 'app/css',
     }),
-    postcsseasings(),
     postcssPresetEnv({
       stage: 0,
       features: {

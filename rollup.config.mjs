@@ -2,7 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import compiler from '@ampproject/rollup-plugin-closure-compiler'
-import { default as importHTTP } from 'import-http/rollup'
+import { default as importHTTP } from 'import-http/rollup.js'
 import babel from '@rollup/plugin-babel'
 
 const dev = {
@@ -21,10 +21,7 @@ const dev = {
     babel({
       exclude: 'node_modules/**',
       "presets": [
-        ["@babel/env", {
-          targets: { esmodules: true },
-          bugfixes: true,
-        }]
+        ["@babel/env"]
       ]
     }),
   ],
@@ -50,7 +47,7 @@ const prod = {
     babel({
       exclude: 'node_modules/**',
       "presets": [
-        ["@babel/env", { "modules": false }]
+        ["@babel/env"]
       ]
     }),
     compiler(),
