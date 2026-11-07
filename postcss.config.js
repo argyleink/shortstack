@@ -2,6 +2,7 @@ const postcssPresetEnv  = require('postcss-preset-env')
 const postcssImport     = require('postcss-import')
 const importUrl         = require('postcss-import-url')
 const cssnano           = require('cssnano')
+const doiuse            = require('doiuse')
 
 const dev = {
   plugins: [
@@ -17,6 +18,7 @@ const dev = {
         'gap-properties': false,
       }
     }),
+    doiuse(),
   ]
 }
 
@@ -34,6 +36,7 @@ const prod = {
         'gap-properties': false,
       }
     }),
+    doiuse(),
     cssnano({
       preset: 'default'
     }),
